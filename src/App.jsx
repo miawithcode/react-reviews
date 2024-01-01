@@ -31,6 +31,14 @@ const App = () => {
     });
   };
 
+  const randomReview = () => {
+    let randomIndex = Math.floor(Math.random() * reviews.length)
+    if(randomIndex == index) {
+      randomIndex = index + 1;
+    }
+    setIndex(checkNumber(randomIndex));
+  };
+
   return (
     <main>
       <article>
@@ -42,6 +50,7 @@ const App = () => {
             <img src={image} alt={name} className="avatar" />
           </div>
         </div>
+
         <h4>{name}</h4>
         <p>{job}</p>
         <p>{text}</p>
@@ -54,6 +63,8 @@ const App = () => {
             <FaChevronRight />
           </button>
         </div>
+
+        <button onClick={randomReview}>suprise me</button>
       </article>
     </main>
   );
