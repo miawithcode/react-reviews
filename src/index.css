@@ -66,3 +66,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.wrapper {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 150%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
